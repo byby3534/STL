@@ -21,25 +21,31 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stack.h">
-      <Filter>헤더 파일\DataStructure</Filter>
-    </ClInclude>
-    <ClInclude Include="deque.h">
-      <Filter>헤더 파일\DataStructure</Filter>
-    </ClInclude>
-    <ClInclude Include="deque1.h">
-      <Filter>헤더 파일\DataStructure</Filter>
-    </ClInclude>
-    <ClInclude Include="list.h">
-      <Filter>헤더 파일\DataStructure</Filter>
-    </ClInclude>
-    <ClInclude Include="queue.h">
-      <Filter>헤더 파일\DataStructure</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="소스.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DataStructure\stack.h">
+      <Filter>헤더 파일\DataStructure</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructure\deque.h">
+      <Filter>헤더 파일\DataStructure</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructure\deque1.h">
+      <Filter>헤더 파일\DataStructure</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructure\list.h">
+      <Filter>헤더 파일\DataStructure</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructure\queue.h">
+      <Filter>헤더 파일\DataStructure</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

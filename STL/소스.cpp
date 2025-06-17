@@ -1,5 +1,5 @@
 #include <iostream>
-#include "deque.h"
+#include <deque>
 
 using namespace std;
 
@@ -9,45 +9,37 @@ int main()
 	cin.tie(nullptr);
 	int n, num;
 	cin >> n;
-	deque<pair<int, int>> dq(n);
+	int* dataStructure = new int[n];
+	deque<int> queueStack;
+	
+	// 자료구조 입력
+	for (int i = 0; i < n; i++)
+	{
+		cin >> dataStructure[i];
+	}
 
-	for (int i = 1; i <= n; i++)
+	// 초기 숫자 입력
+	for (int i = 0; i < n; i++)
 	{
 		cin >> num;
-		dq.push_back(make_pair(i, num));
+		// 스택은 존재하지 않아도 결과에 영향이 없음 그러므로 큐일 때만 숫자 입력
+		if (dataStructure[i] == 0)
+		{
+			queueStack.push_front(num);
+		}
 	}
 
-	num = dq.front().second;
-	cout << dq.front().first << ' ';
-
-	dq.pop_front(); // 처음 터진 풍선 제거
-
-	while (!dq.empty())
+	cin >> n;
+	// 0 = 큐, 1 = 스택
+	// 큐는 선입선출 구조로 먼저있던게 빠지기 때문에 변화가 있음 반대로 스택은 후입 선출 구조기 때문에 변화가 없음
+	for (int i = 0; i < n; i++)
 	{
-		if (num > 0)	// +
-		{
-			for (int i = 0; i < num - 1; i++)	// 다음 터트릴 풍선이 front가 되도록 push_back후 pop_front (num - 1) 만큼 반복
-			{
-				dq.push_back(dq.front());
-				dq.pop_front();
-			}
-
-			num = dq.front().second;
-			cout << dq.front().first << ' ';
-			dq.pop_front();
-		}
-		else   // -
-		{
-			for (int i = 0; i > num + 1; i--)	// 음수일 경우 양수의 반대로 push_front후 pop_back
-			{
-				dq.push_front(dq.back());
-				dq.pop_back();
-			}
-			num = dq.back().second;
-			cout << dq.back().first << ' ';
-			dq.pop_back();
-		}
+		cin >> num;
+		queueStack.push_back(num);
+		cout << queueStack.front() << ' ';
+		queueStack.pop_front();
 	}
 
+	delete[] dataStructure;
 	return 0;
 }
