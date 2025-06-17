@@ -19,13 +19,22 @@
     <Filter Include="헤더 파일\Algorithm">
       <UniqueIdentifier>{86204777-87bd-451f-a57f-3623fe08150d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\Algorithm\Sort">
+      <UniqueIdentifier>{1862b21a-7ba6-4e29-a554-962e7fe1682a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Algorithm">
+      <UniqueIdentifier>{2f8af45f-4959-4512-af0c-f16067ba8adc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="소스.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Insertation.cpp">
+      <Filter>소스 파일\Algorithm</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -46,6 +55,9 @@
     </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\Sort\Insertation.h">
+      <Filter>헤더 파일\Algorithm\Sort</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
